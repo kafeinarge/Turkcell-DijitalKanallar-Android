@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ZAFER/AndroidStudioProjects/Turkcell-DijitalKanallar-Android/app/src/main/res/drawable/ic_favorite.xml" value="0.295" />
         <entry key="..\:/Users/ZAFER/AndroidStudioProjects/Turkcell-DijitalKanallar-Android/app/src/main/res/layout/activity_login.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/ZAFER/AndroidStudioProjects/Turkcell-DijitalKanallar-Android/app/src/main/res/layout/activity_main.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/ZAFER/AndroidStudioProjects/Turkcell-DijitalKanallar-Android/app/src/main/res/layout/activity_movie_detail.xml" value="0.36666666666666664" />
@@ -10,6 +11,7 @@
         <entry key="..\:/Users/ZAFER/AndroidStudioProjects/Turkcell-DijitalKanallar-Android/app/src/main/res/layout/fragment_favorites.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/ZAFER/AndroidStudioProjects/Turkcell-DijitalKanallar-Android/app/src/main/res/layout/layout_item_movie.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/ZAFER/AndroidStudioProjects/Turkcell-DijitalKanallar-Android/app/src/main/res/layout/layout_item_search.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/ZAFER/AndroidStudioProjects/Turkcell-DijitalKanallar-Android/app/src/main/res/menu/bottom_nav_menu.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

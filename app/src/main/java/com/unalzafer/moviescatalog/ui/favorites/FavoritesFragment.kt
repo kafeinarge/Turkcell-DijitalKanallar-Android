@@ -1,5 +1,6 @@
 package com.unalzafer.moviescatalog.ui.favorites
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -59,6 +60,7 @@ class FavoritesFragment : BaseFragment() {
                 if(it.movieList.isNotEmpty()) {
                     binding.tvEmpty.visibility=View.GONE
                     moviesAdapter.movies = it.movieList
+                    moviesAdapter.notifyDataSetChanged()
                 }else{
                     binding.tvEmpty.visibility=View.VISIBLE
                 }
@@ -68,6 +70,13 @@ class FavoritesFragment : BaseFragment() {
         }
 
     }
+
+    override fun onResume() {
+        viewModel.getFavorites()
+        super.onResume()
+
+    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

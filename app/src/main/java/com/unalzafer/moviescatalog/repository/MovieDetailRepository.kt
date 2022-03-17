@@ -10,4 +10,6 @@ constructor(private val apiService: ApiService) {
         suspend fun getMovieDetail(id:String)=apiService.getMovieDetail(id)
 
         suspend fun addRemoveAndFavorite(favorite:Boolean,mediaId:String,request: GenerateTokenRequest)=apiService.addRemoveAndFavorite(favorite,mediaId,request.requestToken,request.sessionId)
+
+        suspend fun addRemoveAccountWatchList(watchList:Boolean,mediaId:String,request: GenerateTokenRequest)=apiService.addRemoveAccountWatchList(watchList,mediaId,request.requestToken,request.sessionId)
 }

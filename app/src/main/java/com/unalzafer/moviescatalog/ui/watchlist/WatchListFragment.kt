@@ -56,6 +56,7 @@ class WatchListFragment : BaseFragment() {
                 if(it.movieList.isNotEmpty()) {
                     binding.tvEmpty.visibility = View.GONE
                     moviesAdapter.movies = it.movieList
+                    moviesAdapter.notifyDataSetChanged()
                 }else{
                     binding.tvEmpty.visibility = View.VISIBLE
                 }
@@ -63,6 +64,12 @@ class WatchListFragment : BaseFragment() {
                 showDialog(it.responseDesc)
             }
         }
+
+    }
+
+    override fun onResume() {
+        viewModel.getWatchListMovies()
+        super.onResume()
 
     }
 

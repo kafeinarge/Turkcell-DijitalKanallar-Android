@@ -18,5 +18,6 @@ object ConstantsService {
     const val  ACCOUNT_WATCH_LIST_MOVIES= "$ACCOUNT$WATCH_LIST/movies"
     const val  DETAIL_MOVIE= "$MOVIE/detail"
     const val  ADD_REMOVE_FAVORITE= "$ACCOUNT$FAVORITE/add_remove"
+    const val  ADD_REMOVE_WATCH_LIST= "$ACCOUNT$WATCH_LIST/add_remove"
 
 }

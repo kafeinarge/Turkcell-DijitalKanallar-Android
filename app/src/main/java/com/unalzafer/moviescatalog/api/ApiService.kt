@@ -43,4 +43,12 @@ interface ApiService {
         @Query("account_id") accountId: String,
         @Query("session_id") sessionId: String
     ): Response<BaseModelResponse>
+
+    @POST(ConstantsService.ADD_REMOVE_WATCH_LIST)
+    suspend fun addRemoveAccountWatchList(
+        @Query("") watchList: Boolean,
+        @Query("mediaId") mediaId: String,
+        @Query("account_id") accountId: String,
+        @Query("session_id") sessionId: String
+    ): Response<BaseModelResponse>
 }

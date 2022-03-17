@@ -45,7 +45,7 @@ class MovieDetailActivity : BaseActivity() {
                     .centerCrop()
                     .placeholder(R.drawable.ic_movie_player_clapperboard)
                     .into(binding!!.ivPoster)
-                favorites()
+                favoritesAndWahtchList()
             } else {
                 showDialog(it.responseDesc)
             }
@@ -58,10 +58,35 @@ class MovieDetailActivity : BaseActivity() {
                 favoriteVisible()
             }
         }
+        binding!!.ivWatchList.setOnClickListener {
+            viewModel.addRemoveAccountWatchList()
+            viewModel.responseAddRemoveAndWatchList.observe(this) {
+                viewModel.isWatchList = !viewModel.isWatchList
+                watchListVisible()
+            }
+        }
 
     }
 
-    fun favorites() {
+    private fun favoritesAndWahtchList() {
+        viewModel.getWatchListMovies()
+        viewModel.responseWatchList.observe(this) {
+            if (it.responseCode == ResponseEnum.MOVIES_SUCCESS.value) {
+                if (it.movieList.isNotEmpty()) {
+                    for (item in it.movieList) {
+                        if (item.id == viewModel.movieDetailType?.id) {
+                            viewModel.isWatchList = true
+                        }
+                    }
+                } else {
+                    viewModel.isWatchList = false
+                }
+                watchListVisible()
+            } else {
+                showDialog(it.responseDesc)
+            }
+        }
+
         viewModel.getFavorites()
         viewModel.responseFavorites.observe(this) {
             if (it.responseCode == ResponseEnum.MOVIES_SUCCESS.value) {
@@ -86,5 +111,12 @@ class MovieDetailActivity : BaseActivity() {
             binding!!.ivFavorite.setImageResource(R.drawable.ic_favorite)
         else
             binding!!.ivFavorite.setImageResource(R.drawable.ic_un_favorite)
+    }
+
+    private fun watchListVisible() {
+        if (viewModel.isWatchList)
+            binding!!.ivWatchList.setImageResource(R.drawable.ic_list)
+        else
+            binding!!.ivWatchList.setImageResource(R.drawable.ic_un_list)
     }
 }

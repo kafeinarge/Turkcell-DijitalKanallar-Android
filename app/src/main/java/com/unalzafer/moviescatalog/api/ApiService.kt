@@ -46,7 +46,7 @@ interface ApiService {
 
     @POST(ConstantsService.ADD_REMOVE_WATCH_LIST)
     suspend fun addRemoveAccountWatchList(
-        @Query("") watchList: Boolean,
+        @Query("watchList") watchList: Boolean,
         @Query("mediaId") mediaId: String,
         @Query("account_id") accountId: String,
         @Query("session_id") sessionId: String

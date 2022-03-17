@@ -6,6 +6,7 @@ object ConstantsService {
 
     const val  POSTER_PATH_BASE_URL="https://image.tmdb.org/t/p/"
     const val  POSTER_PATH_SIZE_200="w200"
+    const val  POSTER_PATH_SIZE_500="w500"
     private const val  MOVIE="/movie"
     private const val  ACCOUNT="/account"
     private const val  FAVORITE="/favorite"

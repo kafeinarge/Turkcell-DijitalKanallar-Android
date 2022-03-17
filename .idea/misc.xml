@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/ZAFER/AndroidStudioProjects/Turkcell-DijitalKanallar-Android/app/src/main/res/layout/activity_login.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/ZAFER/AndroidStudioProjects/Turkcell-DijitalKanallar-Android/app/src/main/res/layout/activity_main.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/ZAFER/AndroidStudioProjects/Turkcell-DijitalKanallar-Android/app/src/main/res/layout/activity_movie_detail.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/ZAFER/AndroidStudioProjects/Turkcell-DijitalKanallar-Android/app/src/main/res/layout/dialog_general.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/ZAFER/AndroidStudioProjects/Turkcell-DijitalKanallar-Android/app/src/main/res/layout/fragment_favorites.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/ZAFER/AndroidStudioProjects/Turkcell-DijitalKanallar-Android/app/src/main/res/layout/layout_item_movie.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/ZAFER/AndroidStudioProjects/Turkcell-DijitalKanallar-Android/app/src/main/res/layout/layout_item_search.xml" value="0.18802083333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

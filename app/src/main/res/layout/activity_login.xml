@@ -92,7 +92,6 @@
                         android:hint="@string/prompt_email"
                         android:inputType="textEmailAddress"
                         android:selectAllOnFocus="true"
-                        android:text="unalzafer"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -108,7 +107,6 @@
                         android:imeOptions="actionDone"
                         android:inputType="textPassword"
                         android:selectAllOnFocus="true"
-                        android:text="tszk1992"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/username" />

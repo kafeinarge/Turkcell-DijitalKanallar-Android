@@ -53,7 +53,6 @@ class FavoritesFragment : BaseFragment() {
             setHasFixedSize(true)
         }
 
-
         viewModel.getFavorites()
         viewModel.responseMovies.observe(viewLifecycleOwner) {
             if(it.responseCode==ResponseEnum.MOVIES_SUCCESS.value) {

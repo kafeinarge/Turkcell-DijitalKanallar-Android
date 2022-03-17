@@ -23,3 +23,19 @@ fun loadImageSmall(imageView: ImageView, imageUrl: String) {
         }
     }
 }
+@BindingAdapter("imageUrlPoster")
+fun loadImageBig(imageView: ImageView, imageUrlPoster: String) {
+    if (imageUrlPoster.isNotEmpty()) {
+        try {
+            Glide
+                .with(imageView.context)
+                .load(ConstantsService.POSTER_PATH_BASE_URL + ConstantsService.POSTER_PATH_SIZE_500 + imageUrlPoster)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .centerCrop()
+                .placeholder(R.drawable.ic_movie_player_clapperboard)
+                .into(imageView)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+}

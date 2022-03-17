@@ -18,7 +18,7 @@
             android:id="@+id/constraintLayout"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/clUnderLine"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -45,17 +45,28 @@
                 app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
                 tools:text="@tools:sample/lorem" />
 
-            <TextView
-                android:id="@+id/textView8"
+            <ScrollView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:padding="@dimen/spacing_16dp"
-                android:text="@{movieDetail.overview}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ivPoster"
-                tools:text="@tools:sample/lorem/random" />
+                app:layout_constraintTop_toBottomOf="@+id/ivPoster">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/spacing_16dp"
+                        android:text="@{movieDetail.overview}"
+                        tools:text="@tools:sample/lorem/random" />
+                </LinearLayout>
+            </ScrollView>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout2"
@@ -104,6 +115,35 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:text="17/12/2022" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clUnderLine"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/ivWatchList"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_dashboard_black_24dp" />
+
+            <ImageView
+                android:id="@+id/ivFavorite"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivWatchList"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_un_favorite" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
